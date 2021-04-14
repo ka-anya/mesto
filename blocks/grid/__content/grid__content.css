@@ -1,0 +1,5 @@
+.grid__content {
+  display: flex;
+  width: 246px;
+  justify-content: space-between;
+}
