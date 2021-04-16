@@ -3,3 +3,9 @@
   max-width: 880px;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 630px) {
+  .profile {
+    display: block;
+  }
+ }

@@ -1,3 +1,10 @@
 .profile__foto {
   width: 120px;
 }
+
+@media screen and (max-width: 430px) {
+  .profile__foto {
+    margin: auto;
+  }
+ }
+

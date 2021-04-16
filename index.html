@@ -8,6 +8,20 @@
 </head>
 
 <body class="page">
+  <section class="popup popup_opened">
+    <div class="popup__box">
+    <img class="popup__close" src="./images/close_icon.png" alt="Закрыть">
+    <form class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <fieldset class="popup__info">
+            <input type="text" class="popup__name contacts" id="first-name" name="first-name" placeholder="Имя" required>
+            <input type="text" class="popup__activity contacts" id="activity" name="activity" placeholder="Род деятельности" required>
+      </fieldset>
+      <button class="popup__button" type="submit">Сохранить</button>
+  </form>
+</div>
+
+  </section>
   <header class="header margin-auto">
     <img class="header__logo" src="./images/logo_mesto.svg" alt="Место">
     <img class="header__line" src="./images/line_mesto.svg" alt="Линия">
@@ -18,10 +32,10 @@
       <div class="profile__info">
         <img class="profile__foto" src="./images/avatar.png" alt="Фото профиля">
         <div class="profile__text">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <h1 class="profile__name">Жак-Ив Кусто<img class="profile__edit" src="./images/edit_button.svg" alt="Редактировать профиль"></h1>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <img class="profile__edit" src="./images/edit_button.svg" alt="Редактировать профиль">
+
       </div>
       <img class="profile__add" src="./images/add_button.svg" alt="Добавить контент">
     </section>
@@ -70,9 +84,12 @@
   </div>
 </div>
     </section>
+
+
   </main>
 
   <footer class="footer margin-auto">
 <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
+  <script src="./scripts/index.js" defer></script>
 </body>

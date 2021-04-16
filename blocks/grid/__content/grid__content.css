@@ -3,3 +3,15 @@
   width: 246px;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 660px) {
+  .grid__content {
+    width: 450px;
+  }
+ }
+
+ @media screen and (max-width: 550px) {
+  .grid__content {
+    width: 246px;
+  }
+ }
