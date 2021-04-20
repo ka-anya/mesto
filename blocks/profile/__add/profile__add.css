@@ -1,6 +1,12 @@
 .profile__add {
   width: 150px;
-
+  border: solid 2px white;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  align-self: center;
 }
 
 .profile__add:hover {
@@ -10,7 +16,8 @@
 
 @media screen and (max-width: 620px) {
   .profile__add {
-    padding-top: 36px;
-    margin: auto;
+    margin-top: 36px;
+    width: 100%;
+    max-height: 50px;
   }
  }

@@ -2,4 +2,8 @@
   opacity: 0.5;
   cursor: pointer;
  }
- 
+
+ .grid__like:active {
+  color: black;
+ }
+
