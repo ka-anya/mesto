@@ -6,6 +6,7 @@ let nameProfile = document.querySelector('.profile__name');
 let subtitle = document.querySelector('.profile__subtitle');
 let textProfile = document.querySelector('.profile__text');
 
+
 function togglePopup() {
   popup.classList.toggle('popup_opened')
 }
@@ -20,6 +21,10 @@ let formElement = document.querySelector('.popup__container');
 let nameInput = document.querySelector('.popup__name');
 let jobInput = document.querySelector('.popup__activity');
 
+nameInput.value = nameProfile.textContent;
+jobInput.value = subtitle.textContent;
+
+
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
@@ -29,8 +34,8 @@ function formSubmitHandler (evt) {
     popup.classList.add('popup_opened');
 }
 
-
 formElement.addEventListener('submit', formSubmitHandler);
+
 
 
 

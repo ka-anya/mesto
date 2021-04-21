@@ -1,11 +1,10 @@
 .profile__foto {
-width: 120px;
-
+  width: 120px;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 400px) {
   .profile__foto {
-padding: auto;
+   justify-self: center;
   }
  }
 
