@@ -1,18 +1,9 @@
 .popup__close {
-position: absolute;
-max-width: 40px;
-top: -40px;
-right: -40px;
-}
-
-.popup__close:hover {
-  opacity: 0.6;
-  cursor: pointer;
+width: 40px;
 }
 
 @media screen and (max-width: 500px) {
   .popup__close {
-    right: 0;
     max-width: 26px;
 }
 }

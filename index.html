@@ -8,14 +8,14 @@
   </head>
 
   <body class="page">
-    <section class="popup popup_opened">
+    <section class="popup">
       <div class="popup__box">
-        <button><img class="popup__close" src="./images/close_icon.png" alt="Закрыть"></button>
+        <button type="button" class="popup__close-button"><img class="popup__close" src="./images/close_icon.svg" alt="Закрыть"></button>
         <form class="popup__container">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__info">
-            <input type="text" class="popup__name contacts" id="first-name" name="first-name" placeholder="Имя" required >
-            <input type="text" class="popup__activity contacts" id="activity" name="activity" placeholder="Род деятельности" required >
+            <input type="text" class="popup__name" id="first-name" name="first-name" placeholder="Имя" required >
+            <input type="text" class="popup__activity" id="activity" name="activity" placeholder="Род деятельности" required >
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
@@ -24,19 +24,21 @@
 
     <header class="header margin-auto">
       <img class="header__logo" src="./images/logo_mesto.svg" alt="Место">
-      <img class="header__line" src="./images/line_mesto.svg" alt="Линия">
     </header>
 
     <main>
       <section class="profile margin-auto">
         <div class="profile__info">
-         <img class="profile__foto" src="./images/avatar.png" alt="Фото профиля">
-          <div class="profile__text">
-             <h1 class="profile__name">Жак-Ив Кусто<img class="profile__edit" src="./images/edit_button.svg" alt="Редактировать профиль"></h1>
-            <p class="profile__subtitle">Исследователь океана</p>
+            <img class="profile__foto" src="./images/avatar.png" alt="Фото профиля">
+            <div class="profile__main-info">
+              <div class="profile__text">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__subtitle">Исследователь океана</p>
+              </div>
+              <button type="button" class="profile__edit-button"><img class="profile__edit" src="./images/edit_button.svg" alt="Редактировать профиль"></button>
           </div>
         </div>
-        <button class="profile__add"><img class="profile__cell" src="./images/cell.svg" alt="Добавить контент"></button>
+        <button type="button" class="profile__add"><img class="profile__cell" src="./images/cell.svg" alt="Добавить контент"></button>
       </section>
 
       <section class="grid margin-auto">
@@ -44,42 +46,42 @@
           <img class="grid__img" src="./images/grid_castle.jpg" alt="Фотокарточка">
             <div class="grid__content margin-auto">
               <h2 class="grid__title">Карачаево-Черкесия</h2>
-              <img class="grid__like" src="./images/like.svg" alt="Лайк">
+              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
             </div>
         </div>
         <div class="grid__element">
           <img class="grid__img" src="./images/grid_sunset.jpg" alt="Фотокарточка">
             <div class="grid__content margin-auto">
               <h2 class="grid__title">Гора Эльбрус</h2>
-              <img class="grid__like" src="./images/like.svg" alt="Лайк">
+              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
             </div>
         </div>
         <div class="grid__element">
           <img class="grid__img" src="./images/grid_mountain.jpg" alt="Фотокарточка">
             <div class="grid__content margin-auto">
               <h2 class="grid__title">Домбай</h2>
-              <img class="grid__like" src="./images/like.svg" alt="Лайк">
+              <button type="button" class="grid__like-button">x<img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
             </div>
         </div>
         <div class="grid__element">
             <img class="grid__img" src="./images/grid_sunset.jpg" alt="Фотокарточка">
             <div class="grid__content margin-auto">
               <h2 class="grid__title">Гора Эльбрус</h2>
-              <img class="grid__like" src="./images/like.svg" alt="Лайк">
+              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
             </div>
         </div>
         <div class="grid__element">
           <img class="grid__img" src="./images/grid_mountain.jpg" alt="Фотокарточка">
           <div class="grid__content margin-auto">
             <h2 class="grid__title">Домбай</h2>
-            <img class="grid__like" src="./images/like.svg" alt="Лайк">
+            <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
           </div>
         </div>
         <div class="grid__element">
           <img class="grid__img" src="./images/grid_castle.jpg" alt="Фотокарточка">
           <div class="grid__content margin-auto">
             <h2 class="grid__title">Карачаево-Черкесия</h2>
-            <img class="grid__like" src="./images/like.svg" alt="Лайк">
+            <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
           </div>
         </div>
       </section>
