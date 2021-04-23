@@ -11,11 +11,11 @@
     <section class="popup">
       <div class="popup__box">
         <button type="button" class="popup__close-button"><img class="popup__close" src="./images/close_icon.svg" alt="Закрыть"></button>
-        <form class="popup__container">
+        <form name="profile-info" class="popup__container">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__info">
-            <input type="text" class="popup__name" id="first-name" name="first-name" placeholder="Имя" required >
-            <input type="text" class="popup__activity" id="activity" name="activity" placeholder="Род деятельности" required >
+            <input type="text" class="popup__input popup__input_js_name" id="first-name" name="first-name" placeholder="Имя" required >
+            <input type="text" class="popup__input popup__input_js_activity margin-top" id="activity" name="activity" placeholder="Род деятельности" required >
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
@@ -26,7 +26,7 @@
       <img class="header__logo" src="./images/logo_mesto.svg" alt="Место">
     </header>
 
-    <main>
+    <main class="main">
       <section class="profile margin-auto">
         <div class="profile__info">
             <img class="profile__foto" src="./images/avatar.png" alt="Фото профиля">
@@ -87,7 +87,7 @@
       </section>
     </main>
 
-    <footer class="footer margin-auto">
+    <footer class="footer margin-auto main">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
     <script src="./scripts/index.js" defer></script>
