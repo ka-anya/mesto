@@ -1,6 +1,7 @@
-.grid__like:hover {
+.grid__trash:hover {
   opacity: 0.5;
   cursor: pointer;
+  width: 18px;
  }
 
 

@@ -1,0 +1,8 @@
+.add-card__close {
+  width: 40px;
+}
+@media screen and (max-width: 500px) {
+  .add-card__close {
+    max-width: 26px;
+}
+}
