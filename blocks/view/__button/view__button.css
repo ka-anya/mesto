@@ -1,0 +1,23 @@
+.view__button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  position: absolute;
+  max-width: 40px;
+  top: -40px;
+  right: -40px;
+}
+
+.view__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .view__button {
+    right: 26px;
+    max-width: 26px;
+}
+}

@@ -10,3 +10,13 @@
   z-index: 2;
   display: none;
 }
+
+.add-card > .add-card__box {
+  visibility: visible;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.add-card:hover > .add-card__box {
+  visibility: visible;
+  opacity: 1;
+}

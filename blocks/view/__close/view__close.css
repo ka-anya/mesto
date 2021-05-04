@@ -1,0 +1,9 @@
+.view__close {
+  width: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .view__close {
+    max-width: 26px;
+}
+}
