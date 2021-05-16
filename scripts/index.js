@@ -47,6 +47,8 @@ const initialCards = [
 ];
 
 
+
+
 closeViewImg.addEventListener('click', function () {
   imgO.classList.toggle('popup_opened');
 });
@@ -131,6 +133,8 @@ function handlerFormSubmit (evt) {
     closePopup(popupProfile);
 }
 
+
+
 openPopupButton.addEventListener('click', addInputInfo);
 closePopupButton.addEventListener('click', clickCloseEditProfile);
 openAddCardButton.addEventListener('click', clickOpenView);
@@ -138,6 +142,16 @@ closeAddCardButton.addEventListener('click', clickCloseView);
 
 formElement.addEventListener('submit', handlerFormSubmit);
 cardAddElement.addEventListener('submit', addNameCard);
+
+const config = {
+    formSelector: '.popup__container',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+}
+enableValidation(config);
+
 
 
 

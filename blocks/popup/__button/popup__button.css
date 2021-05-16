@@ -14,13 +14,19 @@
   transition: opacity .4s;
   color: white;
   font-family: inherit;
+  background-color: #000
 }
 
 .popup__button:hover {
   opacity: .8;
 }
 
-.popup__button[type="submit"] {
-  background-color: #000;
+.popup__button:disabled {
+  color: rgba(0, 0, 0, .8);
+  border: 1px solid #000000;
+  background-color: white;
+  cursor: not-allowed;
 }
+
+
 

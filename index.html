@@ -11,11 +11,13 @@
     <section class="popup popup_profile">
       <div class="popup__box">
         <button type="button" class="popup__close-button"><img class="popup__close" src="./images/close_icon.svg" alt="Закрыть"></button>
-        <form name="profile-info" class="popup__container">
+        <form name="profile-info" class="popup__container" novalidate>
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__info">
-            <input type="text" class="popup__input popup__input_js_name" id="first-name" name="first-name" placeholder="Имя" required >
-            <input type="text" class="popup__input popup__input_js_activity" id="activity" name="activity" placeholder="Род деятельности" required >
+            <input type="text" class="popup__input popup__input_js_name" minlength="2" maxlength="40" id="first-name" name="first-name" placeholder="Имя" required>
+            <span class="popup__input-error" id="first-name-error"></span>
+            <input type="text" class="popup__input popup__input_js_activity" minlength="2" maxlength="200" id="activity" name="activity" placeholder="О себе" required>
+            <span class="popup__input-error" id="activity-error"></span>
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
@@ -25,11 +27,13 @@
     <section class="popup popup_view">
       <div class="popup__box">
         <button type="button" class="popup__close-button popup__close-button_view"><img class="popup__close" src="./images/close_icon.svg" alt="Закрыть"></button>
-        <form name="profile-info" class="popup__container popup__container-view">
+        <form name="profile-info" class="popup__container popup__container-view" novalidate>
           <h2 class="popup__title">Новое место</h2>
           <fieldset class="popup__info">
-            <input type="text" class="popup__input popup__input_js_name" id="card-name" name="card-name" placeholder="Название" required >
-            <input type="url" class="popup__input popup__input_js_activity" id="img" name="img" placeholder="Ссылка на картинку" required >
+            <input type="text" class="popup__input popup__input_js_name" minlength="2" maxlength="30" id="card-name" name="card-name" placeholder="Название" required>
+            <span class="popup__input-error" id="card-name-error"></span>
+            <input type="url" class="popup__input popup__input_js_activity" id="img" name="img" placeholder="Ссылка на картинку" required>
+            <span class="popup__input-error" id="img-error"></span>
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
@@ -64,49 +68,6 @@
       </section>
 
       <section class="grid margin-auto">
-        <!--<div class="grid__element">
-          <img class="grid__img" src="./images/grid_castle.jpg" alt="Фотокарточка">
-          <button type="button" class="grid__trash-button"><img class="grid__trash" src="./images/trash.svg" alt="Лайк"></button>
-            <div class="grid__content margin-auto">
-              <h2 class="grid__title">Карачаево-Черкесия</h2>
-              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-            </div>
-        </div>
-         <div class="grid__element">
-          <img class="grid__img" src="./images/grid_sunset.jpg" alt="Фотокарточка">
-            <div class="grid__content margin-auto">
-              <h2 class="grid__title">Гора Эльбрус</h2>
-              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-            </div>
-        </div>
-        <div class="grid__element">
-          <img class="grid__img" src="./images/grid_mountain.jpg" alt="Фотокарточка">
-            <div class="grid__content margin-auto">
-              <h2 class="grid__title">Домбай</h2>
-              <button type="button" class="grid__like-button">x<img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-            </div>
-        </div>
-        <div class="grid__element">
-            <img class="grid__img" src="./images/grid_sunset.jpg" alt="Фотокарточка">
-            <div class="grid__content margin-auto">
-              <h2 class="grid__title">Гора Эльбрус</h2>
-              <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-            </div>
-        </div>
-        <div class="grid__element">
-          <img class="grid__img" src="./images/grid_mountain.jpg" alt="Фотокарточка">
-          <div class="grid__content margin-auto">
-            <h2 class="grid__title">Домбай</h2>
-            <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-          </div>
-        </div>
-        <div class="grid__element">
-          <img class="grid__img" src="./images/grid_castle.jpg" alt="Фотокарточка">
-          <div class="grid__content margin-auto">
-            <h2 class="grid__title">Карачаево-Черкесия</h2>
-            <button type="button" class="grid__like-button"><img class="grid__like" src="./images/like.svg" alt="Лайк"></button>
-          </div>
-        </div> -->
       </section>
     </main>
 
@@ -123,6 +84,7 @@
           </div>
       </div>
     </template>
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/index.js" defer></script>
   </body>
 </html>
