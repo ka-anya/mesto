@@ -133,12 +133,36 @@ function handlerFormSubmit (evt) {
     closePopup(popupProfile);
 }
 
+function clickClosePopupProfile (evt) {
+  if(evt.target === evt.currentTarget) {
+    closePopup(popupProfile);
+  }
+}
+function clickClosePopupView (evt) {
+  if(evt.target === evt.currentTarget) {
+    clickCloseView();
+  }
+}
+function clickClosePopupImg (evt) {
+  if(evt.target === evt.currentTarget) {
+    closePopup(imgO);
+  }
+}
 
+function keyHandler(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(popupProfile);
+  }
+ }
 
 openPopupButton.addEventListener('click', addInputInfo);
 closePopupButton.addEventListener('click', clickCloseEditProfile);
 openAddCardButton.addEventListener('click', clickOpenView);
 closeAddCardButton.addEventListener('click', clickCloseView);
+popupProfile.addEventListener('keydown', keyHandler);
+popupProfile.addEventListener('click', clickClosePopupProfile);
+popupView.addEventListener('click', clickClosePopupView);
+imgO.addEventListener('click', clickClosePopupImg);
 
 formElement.addEventListener('submit', handlerFormSubmit);
 cardAddElement.addEventListener('submit', addNameCard);
@@ -148,6 +172,7 @@ const config = {
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__button',
     inputErrorClass: 'popup__input_type_error',
+    errorActiveClass:'popup__input-error_active',
     errorClass: 'popup__error_visible'
 }
 enableValidation(config);

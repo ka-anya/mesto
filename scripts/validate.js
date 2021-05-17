@@ -1,24 +1,26 @@
 
 
 const showErrorInput = (formElement, inputElement) => {
+  const {inputErrorClass, errorActiveClass} = config;
   const errorEl = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.add('popup__input_type_error');
+  inputElement.classList.add(inputErrorClass);
   errorEl.textContent = inputElement.validationMessage;
-  errorEl.classList.add('popup__input-error_active');
+  errorEl.classList.add(errorActiveClass);
 }
 
 const hideErrorInput = (formElement, inputElement) => {
+  const {inputErrorClass, errorActiveClass} = config;
   const errorEl = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.remove('popup__input_type_error');
-  errorEl.classList.remove('popup__input-error_active');
+  inputElement.classList.remove(inputErrorClass);
+  errorEl.classList.remove(errorActiveClass);
   errorEl.textContent = '';
 }
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, config) => {
   if (inputElement.validity.valid) {
-    hideErrorInput(formElement, inputElement);
+    hideErrorInput(formElement, inputElement, config);
   } else {
-    showErrorInput(formElement, inputElement);
+    showErrorInput(formElement, inputElement, config);
   }
 }
 
@@ -35,17 +37,18 @@ const toggleButton = (buttonEl, inputs) => {
 
 }
 
-const setEventListeners = (formElement) => {
+const setEventListeners = (formElement, config) => {
+  const {inputSelector, submitButtonSelector, ...restConfig} = config;
   formElement.addEventListener('submit', (evt) => {
     evt.preventDefault()
   });
-  const inputs = Array.from(formElement.querySelectorAll('.popup__input'));
+  const inputs = Array.from(formElement.querySelectorAll(inputSelector));
 
-const buttonEl = formElement.querySelector('.popup__button')
+const buttonEl = formElement.querySelector(submitButtonSelector)
 
   inputs.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
-    checkInputValidity(formElement, inputElement);
+    checkInputValidity(formElement, inputElement, restConfig);
     toggleButton(buttonEl, inputs);
   });
   });
@@ -53,9 +56,10 @@ const buttonEl = formElement.querySelector('.popup__button')
 };
 
 const enableValidation = (config) => {
-const forms = Array.from(document.querySelectorAll('.popup__container'));
-forms.forEach(formElement => {
-  setEventListeners(formElement);
+  const {formSelector, ...restConfig} = config
+  const forms = Array.from(document.querySelectorAll(formSelector));
+  forms.forEach(formElement => {
+    setEventListeners(formElement, restConfig);
 });
 };
 
