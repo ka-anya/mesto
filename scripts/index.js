@@ -149,9 +149,21 @@ function clickClosePopupImg (evt) {
   }
 }
 
-function keyHandler(evt) {
+function keyHandlerProfile(evt) {
   if (evt.key === 'Escape') {
-    closePopup(popupProfile);
+    clickCloseEditProfile();
+  }
+ }
+
+ function keyHandlerView(evt) {
+  if (evt.key === 'Escape') {
+    clickCloseView();
+  }
+ }
+
+ function keyHandlerImg(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(imgO);
   }
  }
 
@@ -159,7 +171,9 @@ openPopupButton.addEventListener('click', addInputInfo);
 closePopupButton.addEventListener('click', clickCloseEditProfile);
 openAddCardButton.addEventListener('click', clickOpenView);
 closeAddCardButton.addEventListener('click', clickCloseView);
-popupProfile.addEventListener('keydown', keyHandler);
+popupProfile.addEventListener('keydown', keyHandlerProfile);
+popupView.addEventListener('keydown', keyHandlerView);
+imgO.addEventListener('keydown', keyHandlerImg);
 popupProfile.addEventListener('click', clickClosePopupProfile);
 popupView.addEventListener('click', clickClosePopupView);
 imgO.addEventListener('click', clickClosePopupImg);
