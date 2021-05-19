@@ -34,7 +34,6 @@ const toggleButton = (buttonEl, inputs) => {
   } else {
     buttonEl.disabled = false;
   }
-
 }
 
 const setEventListeners = (formElement, config) => {
