@@ -1,4 +1,26 @@
-class Card {
+
+
+const imgO = document.querySelector('.popup_img');
+
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupEsc);
+}
+
+function closePopupEsc(evt) {
+  if(evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+}
+
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupEsc);
+}
+
+
+export class Card {
   constructor(name, link, cardSelector) {
     this._name = name;
     this._link = link;
@@ -6,6 +28,7 @@ class Card {
     this._makeLayout();
     this._setEventListeners();
   }
+
 
   _makeLayout() {
     this._cardElement = document
@@ -17,9 +40,9 @@ class Card {
     this._cardImg = this._cardElement.querySelector('.grid__img');
     this._likebutton = this._cardElement.querySelector('.grid__like-button');
     this._trashButton = this._cardElement.querySelector('.grid__trash');
-    const cardTitle = this._cardElement.querySelector('.grid__title');
+    this._cardTitle = this._cardElement.querySelector('.grid__title');
 
-    cardTitle.textContent = this._name;
+    this._cardTitle.textContent = this._name;
     this._cardImg.src = this._link;
     this._cardImg.alt = this._name;
   }
@@ -51,4 +74,4 @@ class Card {
   }
 }
 
-export {Card}
+
