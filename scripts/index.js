@@ -16,7 +16,6 @@ const jobInput = document.querySelector('.popup__input_js_activity');
 const cardContainer = document.querySelector('.grid');
 const cardName = document.querySelector('#card-name');
 const imgCard = document.querySelector('#img');
-const template = document.querySelector('#grid-template');
 const imgO = document.querySelector('.popup_img');
 const closeViewImg = document.querySelector('.popup__close-button_img');
 const popupButton = document.querySelector('.popup__button_view');
@@ -54,7 +53,11 @@ const initialCards = [
 
 function addNewCard(data) {
   const card = new Card(data.name, data.link, '#grid-template')
+  return card.render();
+}
 
+function submitNewCard(title, img) {
+  const card = new Card(title.value, img.value, '#grid-template')
   return card.render();
 }
 
@@ -101,10 +104,8 @@ function setSubmitButtonState() {
 
 function addNameCard (evt) {
   evt.preventDefault();
-  const taskValue = cardName.value;
-  const imgSrc = imgCard.value;
   closePopup(popupView);
-  cardContainer.prepend(addNewCard(taskValue, imgSrc));
+  cardContainer.prepend(submitNewCard(cardName, imgCard));
   cardName.value = '';
   imgCard.value = '';
   setSubmitButtonState(evt);
