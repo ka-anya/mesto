@@ -1,23 +1,10 @@
 
+import { imgPopup } from '../scripts/index.js'
 
-const imgO = document.querySelector('.popup_img');
+import {openPopup} from '../scripts/index.js'
 
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-  document.removeEventListener('keydown', closePopupEsc);
-}
-
-function closePopupEsc(evt) {
-  if(evt.key === 'Escape') {
-    const openedPopup = document.querySelector('.popup_opened');
-    closePopup(openedPopup);
-  }
-}
-
-function openPopup(popup) {
-  popup.classList.add('popup_opened');
-  document.addEventListener('keydown', closePopupEsc);
-}
+import  {openImg}  from '../scripts/index.js'
+import  {titleImg}  from '../scripts/index.js'
 
 
 export class Card {
@@ -62,9 +49,8 @@ export class Card {
   }
 
   _handleOpemImg() {
-    const openImg = document.querySelector('.popup__img');
-    const titleImg = document.querySelector('.popup__title-img');
-    openPopup(imgO);
+
+    openPopup(imgPopup);
     openImg.src = this._link;
     titleImg.textContent = this._name;
   }
